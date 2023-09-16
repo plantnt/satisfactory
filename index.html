@@ -7,13 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="progress-bar-bg" style="display: flex;">
+        <span class="progress-bar"></span>
+    </div>
+    <!--div class="container_welcome" style="display: flex;">
         <img src="/img/af_logo.png" alt="Alitas Factory">
         <h3>¡Ayúdanos a <span>mejorar</span>!</h3>
         <h4>Prometemos que al final te daremos un regalo</h4>
         <div class="button-msg">
             <button type="button" class="start">Comenzar</button><p id="enter">Pulsa Enter</p>
         </div>
+    </div-->
+    <div class="container_questions" style="display: flex">
+        <form class="q1" style="display: flex;">
+            <h3>1 → ¿Que sede visitaste?</h3>
+            <div class="selector">
+                <div id="selector-field">
+                    <p id="slector-text"></p>
+                    <img src="/img/arrw.png" width="30px">
+                </div>
+                <ul id="list" style="display: block;">
+                    <li class="options">Ingenio</li>
+                    <li class="options">Palmas Mall</li>
+                    <li class="options">Parque del Perro</li>
+                    <li class="options">Borondo</li>
+                </ul>
+            </div>
+        </form>
     </div>
 </body>
+<script src="code.js"></script>
 </html>
