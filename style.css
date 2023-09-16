@@ -44,13 +44,19 @@ span{
     border-radius: 5px;
     font-size: 1.1em;
     font-weight: bold;
+    transition: .3s ease;
+}
+
+.start:hover{
+    cursor:pointer;
+    background-color: #af4e4e;
 }
 
 #enter{
+    position: relative;
+    left: 127px;
     font-weight: 400;
     font-size: .8em;
 }
 
-.button-msg{
-    
-}
+
