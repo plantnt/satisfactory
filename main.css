@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--fontColor);
 }
 
 :root{
-    --primary: #F9CD48;
-    --secondary: #A82626;
-    --hoverSecondary: #af4e4e;
-    --optionBackground: rgb(0,0,0,.1);
-    --optionBgHover: rgb(0,0,0,.5);
+    --primary: #FACE48;
+    --secondary: #560c04;
+    --hoverSecondary: #7f4f49;
+    --fontColor: #441904;
+    --optionBackground: rgba(119, 48, 13, .2);
+    --optionBgHover: rgb(119, 48, 13,.5);
 }
 
 .question{
@@ -35,10 +37,22 @@
     background: var(--optionBgHover);
 }
 
-h3{
+h2{
     font-weight: 400;
     margin: 45px 0;
 }
+
+#qTitle{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+h3{
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
 
 .ratings{
     display: flex;
@@ -49,9 +63,6 @@ h3{
     height: 80px;
 }
 
-#singleText{
-    margin-bottom: 68px;
-}
 
 textarea{
     width: 100%;

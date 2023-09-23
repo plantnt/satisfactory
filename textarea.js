@@ -18,4 +18,10 @@ function checkTextarea(){
 textarea.addEventListener('input', checkTextarea)
 checkTextarea()
 
-acceptBtn.addEventListener('click', q7Transition)
+acceptBtn.addEventListener('click', q2Transition)
+
+function preventEnter(event){
+    if(event.keyCode === 13){
+        event.preventDefault()
+    }
+}

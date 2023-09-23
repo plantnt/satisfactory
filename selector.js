@@ -61,11 +61,6 @@ options.forEach((option) => {
 })
 
 
-const buttonsOfQ2 = document.querySelectorAll(".q2Btn")
-
-buttonsOfQ2.forEach((button) => {
-    button.addEventListener('click', q2Transition)
-})
 
 const buttonsOfQ3 = document.querySelectorAll(".q3Btn")
 
@@ -219,9 +214,9 @@ function q6Transition(){
             setTimeout(() => {
                 questionForm6.style.display = "none"
                 progressBar.style.width = "70vw"
-                questionForm7.style.display = "flex"
+                questionForm8.style.display = "flex"
                 setTimeout(() => {
-                    questionForm7.classList.add("active")
+                    questionForm8.classList.add("active")
                 }, 1000);
 
             }, 200);
@@ -229,20 +224,19 @@ function q6Transition(){
     }, 1500);
 }
 
-const questionForm7 = document.getElementById("q7")
 
 function q7Transition(){
     setTimeout(() => {
-        questionForm7.style.transform = "translateY(-200px)"
-        questionForm7.style.transition = ".3s ease"
-        setTimeout(() => {
-            questionForm7.style.opacity = "0"
+        questionForm8.style.transform = "translateY(-200px)"
+        questionForm8.style.transition = ".3s ease"
+        setTimeout(() =>{
+            questionForm8.style.opacity = "0"
             setTimeout(() => {
-                questionForm7.style.display = "none"
+                questionForm8.style.display = "none"
                 progressBar.style.width = "80vw"
-                questionForm8.style.display = "flex"
+                questionForm9.style.display = "flex"
                 setTimeout(() => {
-                    questionForm8.classList.add("active")
+                    questionForm9.classList.add("active")
                 }, 1000);
 
             }, 200);
@@ -254,12 +248,12 @@ const questionForm8 = document.getElementById("q8")
 
 function q8Transition(){
     setTimeout(() => {
-        questionForm8.style.transform = "translateY(-200px)"
-        questionForm8.style.transition = ".3s ease"
+        questionForm9.style.transform = "translateY(-200px)"
+        questionForm9.style.transition = ".3s ease"
         setTimeout(() => {
-            questionForm8.style.opacity = "0"
+            questionForm9.style.opacity = "0"
             setTimeout(() => {
-                questionForm8.style.display = "none"
+                questionForm9.style.display = "none"
                 progressBar.style.width = "90vw"
                 questionForm9.style.display = "flex"
                 setTimeout(() => {
