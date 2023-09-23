@@ -13,13 +13,3 @@ startButton.addEventListener('click', () => {
         progressBar.style.display = "flex"
     }, 500);
 })
-
-
-const selectText = document.getElementById("selector-text")
-const listItem = document.querySelectorAll(".options")
-
-listItem.forEach((item) => {
-    item.addEventListener('click', () => {
-        selectText.textContent = item.textContent
-    })
-})

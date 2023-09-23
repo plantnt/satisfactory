@@ -1,18 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
     font-family: 'Lato', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #F9CD48;
+    background: var(--primary);
 }
 
 .progress-bar-bg{
@@ -28,7 +20,7 @@ body{
 .progress-bar{
     width: 10vw;
     height: 25px;
-    background-color: #A82626;
+    background-color: var(--secondary);
 }
 
 .container_welcome{
@@ -37,9 +29,6 @@ body{
 
 }
 
-h3{
-    font-weight: 400;
-}
 h4{
     font-weight: 400;
     margin-bottom: 40px;
@@ -49,11 +38,16 @@ span{
     font-weight: bold;
 }
 
+.container_questions{
+    display: flex;
+    width: 800px;
+}
+
 .start{
     padding: 5px;
     padding-left: 12px;
     padding-right: 12px;
-    background-color: #A82626;
+    background-color: var(--secondary);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -64,7 +58,7 @@ span{
 
 .start:hover{
     cursor:pointer;
-    background-color: #af4e4e;
+    background-color: var(--hoverSecondary);
 }
 
 #enter{
@@ -75,9 +69,6 @@ span{
     font-size: .8em;
 }
 
-.q1{
-    flex-direction: column;
-}
 
 .selector{
     width: 600px;
@@ -86,14 +77,15 @@ span{
 #selector-field{
     box-sizing: border-box;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 2em;
-    padding: 15px 20px;
+    padding: 25px 20px;
     margin-top: 30px;
     margin-bottom: 10px;
-    background: rgb(0,0,0,.1);
+    border: none;
+    background: var(--optionBackground);
     border-radius: 5px;
 }
 
@@ -113,13 +105,47 @@ span{
     list-style: none;
     cursor: pointer;
     box-sizing: border-box;
-    background: rgb(0,0,0,.1);
+    background: var(--optionBackground);
     border: 1px solid #000;
     border-radius: 5px;
 }
 
 .options:hover{
-    background: rgb(0,0,0,.5);
-
+    background: var(--optionBgHover);
 }
 
+
+.option-group{
+    display: flex;
+    width: 100%;
+}
+
+.guide-group{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+#q7 h4{
+    font-style: italic;
+    color: #161616;
+    margin-top: -50px;
+}
+
+
+#waiterName{
+    width: 100%;
+    height: 1.6em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid;
+    padding: 0 20px;
+    font-size: 1.5em;
+    font-family: inherit;
+    resize: none;
+}
+
+#waiterName:focus{
+    outline: none;
+}
