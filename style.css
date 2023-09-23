@@ -8,19 +8,24 @@ body{
 }
 
 .progress-bar-bg{
+    opacity: 0;
+    display: flex;
     justify-content: left;
     position: fixed;
     top: 0;
     min-width: 100vw;
     height: 25px;
     background-color: rgb(0,0,0,.3);
-
+    transition: .3s;
 }
 
 .progress-bar{
+    position: relative;
     width: 10vw;
     height: 25px;
+    left: -100px;
     background-color: var(--secondary);
+    transition: .3s ease;
 }
 
 .container_welcome{
@@ -41,6 +46,18 @@ span{
 .container_questions{
     display: flex;
     width: 800px;
+    animation: fadeFromBottom ease;
+}
+
+.fadeFromBottom{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s ease, transform .5s ease;
+}
+
+.fadeFromBottom.active{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .start{
@@ -96,6 +113,8 @@ span{
 #list{
     width: 100%;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .options{
@@ -126,6 +145,23 @@ span{
     width: 100%;
 }
 
+.skipBtn{
+    width: 150px;
+    padding: 10px 15px;
+    font-family: inherit;
+    font-size: 1.5em;
+    font-weight: 800;
+    border: none !important;
+    border-radius: 5px;
+    color: #fff !important;
+    background: var(--secondary);
+    transition: .3s ease;
+}
+
+.skipBtn:hover{
+    background: var(--hoverSecondary);
+    cursor: pointer;
+}
 
 #q7 h4{
     font-style: italic;
@@ -133,19 +169,3 @@ span{
     margin-top: -50px;
 }
 
-
-#waiterName{
-    width: 100%;
-    height: 1.6em;
-    background: none;
-    border: none;
-    border-bottom: 1px solid;
-    padding: 0 20px;
-    font-size: 1.5em;
-    font-family: inherit;
-    resize: none;
-}
-
-#waiterName:focus{
-    outline: none;
-}

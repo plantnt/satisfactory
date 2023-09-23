@@ -48,6 +48,23 @@ h3{
     width: 800px;
     height: 80px;
 }
+
 #singleText{
     margin-bottom: 68px;
+}
+
+textarea{
+    width: 100%;
+    height: 1.6em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid;
+    padding: 0 20px;
+    font-size: 1.5em;
+    font-family: inherit;
+    resize: none;
+}
+
+textarea:focus{
+    outline: none;
 }

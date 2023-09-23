@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Satisfactory - Alitas Factory</title>
+    <link rel="shortcut icon" href="/img/af_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="progress-bar-bg" style="display: flex;">
+    <div class="progress-bar-bg">
         <span class="progress-bar"></span>
+        <span class="completed-bar"></span>
     </div>
     <div class="container_welcome" style="display: flex;">
         <img src="/img/af_logo.png" alt="Alitas Factory">
@@ -19,7 +21,7 @@
             <button type="button" class="start">Comenzar</button><p id="enter">Pulsa Enter</p>
         </div>
     </div>
-    <div class="container_questions" style="display: flex">
+    <div class="container_questions fadeFromBottom" style="display: none">
         <form id="q1" class="question" style="display: flex;">
             <h3>1 → ¿Que sede visitaste?</h3>
             <div class="selector">
@@ -35,34 +37,35 @@
                 </ul>
             </div>
         </form>
-        <form id="q2" class="question" style="display: flex;">
+        <form id="q2" class="question fadeFromBottom" style="display: none;">
             <h3>2 → En cuanto al lugar...<br/>...¿Qué tan aseado estaba?</h3>
             <div class="rating2 ratings">
                 <div class="option-group">
-                    <button type="button" class="optionBtn">0</button>
-                    <button type="button" class="optionBtn">1</button>
-                    <button type="button" class="optionBtn">2</button>
-                    <button type="button" class="optionBtn">3</button>
-                    <button type="button" class="optionBtn">4</button>
-                    <button type="button" class="optionBtn">5</button>
+                    <button type="button" class="optionBtn q2Btn">0</button>
+                    <button type="button" class="optionBtn q2Btn">1</button>
+                    <button type="button" class="optionBtn q2Btn">2</button>
+                    <button type="button" class="optionBtn q2Btn">3</button>
+                    <button type="button" class="optionBtn q2Btn">4</button>
+                    <button type="button" class="optionBtn q2Btn">5</button>
                 </div>
                 <div class="guide-group">
                     <p>Poco aseado</p>
                     <p>Normal</p>
                     <p>Impecable</p>
                 </div>
+                <button type="button" class="skipBtn">Seguir</button>
             </div>
         </form>
-        <form id="q3" class="question" style="display: flex;">
+        <form id="q3" class="question fadeFromBottom" style="display: none;">
             <h3>3 → En cuanto a la comida...<br/>...¿Qué tal estuvo la temperatura?</h3>
             <div class="rating3 ratings">
                 <div class="option-group">
-                    <button type="button" class="optionBtn">0</button>
-                    <button type="button" class="optionBtn">1</button>
-                    <button type="button" class="optionBtn">2</button>
-                    <button type="button" class="optionBtn">3</button>
-                    <button type="button" class="optionBtn">4</button>
-                    <button type="button" class="optionBtn">5</button>
+                    <button type="button" class="optionBtn q3Btn">0</button>
+                    <button type="button" class="optionBtn q3Btn">1</button>
+                    <button type="button" class="optionBtn q3Btn">2</button>
+                    <button type="button" class="optionBtn q3Btn">3</button>
+                    <button type="button" class="optionBtn q3Btn">4</button>
+                    <button type="button" class="optionBtn q3Btn">5</button>
                 </div>
                 <div class="guide-group">
                     <p>Llegó fría</p>
@@ -71,16 +74,16 @@
                 </div>
             </div>
         </form>
-        <form id="q4" class="question" style="display: flex;">
+        <form id="q4" class="question fadeFromBottom" style="display: none;">
             <h3 id="singleText">4 → ...¿Cómo estuvo la presentación del plato?</h3>
             <div class="rating4 ratings">
                 <div class="option-group">
-                    <button type="button" class="optionBtn">0</button>
-                    <button type="button" class="optionBtn">1</button>
-                    <button type="button" class="optionBtn">2</button>
-                    <button type="button" class="optionBtn">3</button>
-                    <button type="button" class="optionBtn">4</button>
-                    <button type="button" class="optionBtn">5</button>
+                    <button type="button" class="optionBtn q4Btn">0</button>
+                    <button type="button" class="optionBtn q4Btn">1</button>
+                    <button type="button" class="optionBtn q4Btn">2</button>
+                    <button type="button" class="optionBtn q4Btn">3</button>
+                    <button type="button" class="optionBtn q4Btn">4</button>
+                    <button type="button" class="optionBtn q4Btn">5</button>
                 </div>
                 <div class="guide-group">
                     <p>Terrible</p>
@@ -89,16 +92,16 @@
                 </div>
             </div>
         </form>
-        <form id="q5" class="question" style="display: flex;">
+        <form id="q5" class="question fadeFromBottom" style="display: none;">
             <h3 id="singleText">5 → ...¿Qué te pareció la variedad de platos?</h3>
             <div class="rating5 ratings">
                 <div class="option-group">
-                    <button type="button" class="optionBtn">0</button>
-                    <button type="button" class="optionBtn">1</button>
-                    <button type="button" class="optionBtn">2</button>
-                    <button type="button" class="optionBtn">3</button>
-                    <button type="button" class="optionBtn">4</button>
-                    <button type="button" class="optionBtn">5</button>
+                    <button type="button" class="optionBtn q5Btn">0</button>
+                    <button type="button" class="optionBtn q5Btn">1</button>
+                    <button type="button" class="optionBtn q5Btn">2</button>
+                    <button type="button" class="optionBtn q5Btn">3</button>
+                    <button type="button" class="optionBtn q5Btn">4</button>
+                    <button type="button" class="optionBtn q5Btn">5</button>
                 </div>
                 <div class="guide-group">
                     <p>Poca variedad</p>
@@ -107,16 +110,16 @@
                 </div>
             </div>
         </form>
-        <form id="q6" class="question" style="display: flex;">
+        <form id="q6" class="question fadeFromBottom" style="display: none;">
             <h3>6 → En cuanto al servicio...<br/>...¿Cómo fue el tiempo de espera?</h3>
                 <div class="rating6 ratings">
                 <div class="option-group">
-                    <button type="button" class="optionBtn">0</button>
-                    <button type="button" class="optionBtn">1</button>
-                    <button type="button" class="optionBtn">2</button>
-                    <button type="button" class="optionBtn">3</button>
-                    <button type="button" class="optionBtn">4</button>
-                    <button type="button" class="optionBtn">5</button>
+                    <button type="button" class="optionBtn q6Btn">0</button>
+                    <button type="button" class="optionBtn q6Btn">1</button>
+                    <button type="button" class="optionBtn q6Btn">2</button>
+                    <button type="button" class="optionBtn q6Btn">3</button>
+                    <button type="button" class="optionBtn q6Btn">4</button>
+                    <button type="button" class="optionBtn q6Btn">5</button>
                 </div>
                 <div class="guide-group">
                     <p>Lentísimo</p>
@@ -125,23 +128,24 @@
                 </div>
             </div>
         </form>
-        <form id="q7" class="question" style="display: flex;">
-            <h3 id="singleText">7 → ...¿Quién te atendió?</h3>
+        <form id="q7" class="question fadeFromBottom" style="display: none;">
+            <h3 id="singleText">7 → ...¿Quién te atendió?*</h3>
             <h4>Escribe el nombre que llevaba en su uniforme</h4>
             <div class="rating7 ratings">
                 <textarea id="waiterName" rows="1" maxlength="15" placeholder="Escribe aquí tu respuesta..." required></textarea>
             </div>
+            <button type="button" id="acceptBtn" class="skipBtn optionBtn" disabled>Aceptar</button>
         </form>
-        <form id="q8" class="question" style="display: flex;">
+        <form id="q8" class="question fadeFromBottom" style="display: none;">
             <h3 id="singleText">8 → ...¿Cómo te atendió el/la mesero/a?</h3>
                 <div class="rating8 ratings">
                 <div class="option-group">
-                    <button type="button" class="optionBtn">0</button>
-                    <button type="button" class="optionBtn">1</button>
-                    <button type="button" class="optionBtn">2</button>
-                    <button type="button" class="optionBtn">3</button>
-                    <button type="button" class="optionBtn">4</button>
-                    <button type="button" class="optionBtn">5</button>
+                    <button type="button" class="optionBtn q8Btn">0</button>
+                    <button type="button" class="optionBtn q8Btn">1</button>
+                    <button type="button" class="optionBtn q8Btn">2</button>
+                    <button type="button" class="optionBtn q8Btn">3</button>
+                    <button type="button" class="optionBtn q8Btn">4</button>
+                    <button type="button" class="optionBtn q8Btn">5</button>
                 </div>
                 <div class="guide-group">
                     <p>Casi que no me atienden</p>
@@ -150,16 +154,16 @@
                 </div>
             </div>
         </form>
-        <form id="q9" class="question" style="display: flex;">
+        <form id="q9" class="question fadeFromBottom" style="display: none;">
             <h3 id="singleText">9 → ...¿Te explicaron el menú?</h3>
                 <div class="rating9 ratings">
                 <div class="option-group">
-                    <button type="button" class="optionBtn">0</button>
-                    <button type="button" class="optionBtn">1</button>
-                    <button type="button" class="optionBtn">2</button>
-                    <button type="button" class="optionBtn">3</button>
-                    <button type="button" class="optionBtn">4</button>
-                    <button type="button" class="optionBtn">5</button>
+                    <button type="button" class="optionBtn q9Btn">0</button>
+                    <button type="button" class="optionBtn q9Btn">1</button>
+                    <button type="button" class="optionBtn q9Btn">2</button>
+                    <button type="button" class="optionBtn q9Btn">3</button>
+                    <button type="button" class="optionBtn q9Btn">4</button>
+                    <button type="button" class="optionBtn q9Btn">5</button>
                 </div>
                 <div class="guide-group">
                     <p>Lo trajeron y ya</p>
@@ -168,15 +172,22 @@
                 </div>
             </div>
         </form>
-        <form id="q7" class="question" style="display: flex;">
+        <form id="q10" class="question fadeFromBottom" style="display: none;">
             <h3 id="singleText">10 → ¿Quieres contarnos más detalles sobre tu experiencia?</h3>
             <div class="rating7 ratings">
-                <textarea id="waiterName" rows="1" maxlength="15" placeholder="Escribe aquí tu respuesta..."></textarea>
+                <textarea id="addExperience" rows="1" maxlength="15" placeholder="Escribe aquí tu respuesta..."></textarea>
             </div>
+            <button type="button" class="skipBtn">Enviar</button>
         </form>
+        <div class="container_ending" style="display: none;">
+            <h3>¡GRACIAS POR TERMINAR NUESTRA ENCUESTA!</h3>
+            <h4>Aqui está tu regalo</h4>
+            
+        </div>
     </div>
 </body>
 <script src="code.js"></script>
 <script src="selector.js"></script>
 <script src="buttons.js"></script>
+<script src="textarea.js"></script>
 </html>
