@@ -2,7 +2,7 @@ const selectText = document.getElementById("selector-text")
 const selectField = document.getElementById("selector-field")
 const list = document.getElementById("list")
 
-selectField.addEventListener('click', () => {
+selectField.addEventListener('click', () => {       //MOSTRAR LAS OPCIONES PARA LA UBICACION
     console.log("clicked")
     list.style.display = "block"
     setTimeout(() => {
@@ -16,7 +16,7 @@ selectField.addEventListener('click', () => {
 
 })
 
-const options = document.querySelectorAll(".options")
+const options = document.querySelectorAll(".options")       //ANIMACION DE PARPADEO PARA LAS OPCIONES
 
 function pulse(event){
     const option = event.target
@@ -56,10 +56,9 @@ function pulse(event){
 
 }
 
-options.forEach((option) => {
+options.forEach((option) => {                       //ACTIVAR LA ANIMACIÓN DE PARPADEA + ACTIVAR TRANSISIÓN A LA PREGUNTA 2
     option.addEventListener('click', pulse)
 })
-
 
 
 const buttonsOfQ3 = document.querySelectorAll(".q3Btn")
@@ -105,11 +104,33 @@ buttonsOfQ9.forEach((button) => {
 })
 
 
+const codeCheckForm = document.getElementById("checking")
+
+function locationTransition(){
+    console.log("Transition from codecheck")
+    setTimeout(() => {
+        codeCheckForm.style.transform = "translateY(-200px)"
+        codeCheckForm.style.transition = ".3s ease"
+        setTimeout(() => {
+            codeCheckForm.style.opacity = "0"
+            setTimeout(() => {
+                codeCheckForm.style.display = "none"
+                progressBar.style.width = "30vw"
+                questionForm1.style.display = "flex"
+                setTimeout(() => {
+                    questionForm1.classList.add("active")
+                }, 1000);
+            }, 200);
+        },100)  
+    }, 1500);
+            
+}
+
 
 const questionForm1 = document.getElementById("q1")
 
 function q1Transition(){
-    console.log("iwork")
+    console.log("Transition from q1")
     questionForm1.style.transform = "translateY(-200px)"
     questionForm1.style.transition = ".3s ease"
     setTimeout(() => {
@@ -128,6 +149,7 @@ function q1Transition(){
 const questionForm2 = document.getElementById("q2")
 
 function q2Transition(){
+    console.log("Transition from q2")
     setTimeout(() => {
         questionForm2.style.transform = "translateY(-200px)"
         questionForm2.style.transition = ".3s ease"
@@ -149,6 +171,8 @@ function q2Transition(){
 const questionForm3 = document.getElementById("q3")
 
 function q3Transition(){
+    console.log("Transition from q3")
+
     setTimeout(() => {
         questionForm3.style.transform = "translateY(-200px)"
         questionForm3.style.transition = ".3s ease"

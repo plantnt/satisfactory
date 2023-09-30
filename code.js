@@ -3,6 +3,7 @@ const containerQuestions = document.querySelector('.container_questions')
 const startButton = document.querySelector('.start') 
 const progressBarBg = document.querySelector('.progress-bar-bg') 
 const progressBar = document.querySelector('.progress-bar') 
+const codeCheck = document.getElementById('checking')
 
 function welcomeTransition(){
     containerWelcome.style.transition = "opacity 0.5s, transform 0.5s"

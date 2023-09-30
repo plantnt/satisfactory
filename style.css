@@ -43,6 +43,10 @@ body{
 
 }
 
+.selector{
+    width: 100%;
+}
+
 #title{
     font-weight: 500;
 }

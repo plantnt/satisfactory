@@ -23,11 +23,19 @@
         </div>
     </div>
     <div class="container_questions fadeFromBottom" style="display: none">
-        <form id="q1" class="question" style="display: flex;">
+        <form id="checking" class="question" style="display: flex;">
+            <p id="qTitle">Escribe el código que está en tu factura</p>
+            <p id="requiredQuestion">Esta pregungta es obligatoria</p>
+            <div class="ratings">
+                <textarea id="codeValue" rows="1" maxlength="15" onkeydown="preventEnter(event)" placeholder="Escribe aquí tu respuesta..." required></textarea>
+            </div>
+            <button type="button" id="checkingBtn" class="optionBtn buttonStyle codeBtn" disabled>Aceptar</button>
+        </form>
+        <form id="q1" class="question" style="display: none;">
             <p id="qTitle">1 → ¿Que sede visitaste?</p>
             <div class="selector">
                 <div id="selector-field">
-                    <p id="selector-text"></p>
+                    <p id="selector-text">Haz click para elegir</p>
                     <img src="/img/arrw.png" width="30px">
                 </div>
                 <ul id="list" style="display: none;">
@@ -45,7 +53,7 @@
             <div class="rating7 ratings">
                 <textarea id="waiterName" rows="1" maxlength="15" onkeydown="preventEnter(event)" placeholder="Escribe aquí tu respuesta..." required></textarea>
             </div>
-            <button type="button" id="acceptBtn" class="optionBtn buttonStyle" disabled>Aceptar</button>
+            <button type="button" id="waiterBtn" class="optionBtn buttonStyle" disabled>Aceptar</button>
         </form>
         <form id="q3" class="question fadeFromBottom" style="display: none;">
             <p id="qTitle">3 → ¿Qué tan aseado estaba el lugar?</p>
