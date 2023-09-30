@@ -294,3 +294,26 @@ function q9Transition(){
 }
 
 const questionForm10 = document.getElementById("q10")
+
+const sendForm = document.querySelector('.endingBtn')
+const questionContainer = document.querySelector('.container_questions')
+const ending = document.querySelector('.container_ending')
+
+sendForm.addEventListener('click', function endingScreen(){
+    setTimeout(() => {
+        questionContainer.style.transform = "translateY(-200px)"
+        questionContainer.style.transition = ".3s ease"
+        setTimeout(() => {
+            questionContainer.style.opacity = "0"
+            setTimeout(() => {
+                questionContainer.style.display = "none"
+                progressBar.style.width = "100vw"
+                ending.style.display = "flex"
+                setTimeout(() => {
+                    ending.classList.add("active")
+                }, 1000);
+
+            }, 200);
+        },100)  
+    }, 1500);
+})

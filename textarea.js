@@ -1,10 +1,12 @@
 const textarea = document.getElementById("waiterName")
+const inputValue = textarea.value.trim()
 const acceptBtn = document.getElementById("acceptBtn")
+const employeeNames = [ 'Juan','Carlos','Ian','David' ]
 
 function checkTextarea(){
-    if(textarea.value.trim() != ''){
+    if(inputValue != ''){
         acceptBtn.disabled = false
-        console.log("botondis")
+        console.log(inputValue)
         acceptBtn.style.background = "var(--secondary)"
         acceptBtn.style.cursor = "pointer"
     }
