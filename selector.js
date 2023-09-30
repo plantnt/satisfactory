@@ -109,8 +109,7 @@ const codeCheckForm = document.getElementById("checking")
 function locationTransition(){
     console.log("Transition from codecheck")
     setTimeout(() => {
-        codeCheckForm.style.transform = "translateY(-200px)"
-        codeCheckForm.style.transition = ".3s ease"
+        codeCheckForm.classList.add("on")
         setTimeout(() => {
             codeCheckForm.style.opacity = "0"
             setTimeout(() => {
@@ -131,28 +130,28 @@ const questionForm1 = document.getElementById("q1")
 
 function q1Transition(){
     console.log("Transition from q1")
-    questionForm1.style.transform = "translateY(-200px)"
-    questionForm1.style.transition = ".3s ease"
     setTimeout(() => {
-        questionForm1.style.opacity = "0"
+        questionForm1.classList.add("on")
         setTimeout(() => {
-            questionForm1.style.display = "none"
-            progressBar.style.width = "20vw"
-            questionForm2.style.display = "flex"
+            questionForm1.style.opacity = "0"
             setTimeout(() => {
-                questionForm2.classList.add("active")
-            }, 1000);
-        }, 200);
-    },100)    
+                questionForm1.style.display = "none"
+                progressBar.style.width = "20vw"
+                questionForm2.style.display = "flex"
+                setTimeout(() => {
+                    questionForm2.classList.add("active")
+                    
+                }, 1000);
+            }, 200);
+        },100)    
+    }, 100);
 }
 
 const questionForm2 = document.getElementById("q2")
 
 function q2Transition(){
     console.log("Transition from q2")
-    setTimeout(() => {
-        questionForm2.style.transform = "translateY(-200px)"
-        questionForm2.style.transition = ".3s ease"
+    questionForm2.classList.add("active")
         setTimeout(() => {
             questionForm2.style.opacity = "0"
             setTimeout(() => {
@@ -160,11 +159,12 @@ function q2Transition(){
                 progressBar.style.width = "30vw"
                 questionForm3.style.display = "flex"
                 setTimeout(() => {
-                    questionForm3.classList.add("active")
+                    questionForm2.classList.remove("on")
+                    questionForm3.style.opacity = "1"
+                    questionForm3.classList.add("on")
                 }, 1000);
             }, 200);
         },100)  
-    }, 1500);
         
 }
 
@@ -172,20 +172,18 @@ const questionForm3 = document.getElementById("q3")
 
 function q3Transition(){
     console.log("Transition from q3")
-
     setTimeout(() => {
-        questionForm3.style.transform = "translateY(-200px)"
-        questionForm3.style.transition = ".3s ease"
+        questionForm3.classList.add("on")
         setTimeout(() => {
             questionForm3.style.opacity = "0"
             setTimeout(() => {
                 questionForm3.style.display = "none"
-                progressBar.style.width = "40vw"
+                progressBar.style.width = "30vw"
                 questionForm4.style.display = "flex"
                 setTimeout(() => {
                     questionForm4.classList.add("active")
+                    questionForm4.classList.remove("on")
                 }, 1000);
-
             }, 200);
         },100)  
     }, 1500);
@@ -195,7 +193,7 @@ const questionForm4 = document.getElementById("q4")
 
 function q4Transition(){
     setTimeout(() => {
-        questionForm4.style.transform = "translateY(-200px)"
+        
         questionForm4.style.transition = ".3s ease"
         setTimeout(() => {
             questionForm4.style.opacity = "0"
@@ -216,7 +214,7 @@ const questionForm5 = document.getElementById("q5")
 
 function q5Transition(){
     setTimeout(() => {
-        questionForm5.style.transform = "translateY(-200px)"
+        
         questionForm5.style.transition = ".3s ease"
         setTimeout(() => {
             questionForm5.style.opacity = "0"
@@ -237,7 +235,7 @@ const questionForm6 = document.getElementById("q6")
 
 function q6Transition(){
     setTimeout(() => {
-        questionForm6.style.transform = "translateY(-200px)"
+        
         questionForm6.style.transition = ".3s ease"
         setTimeout(() => {
             questionForm6.style.opacity = "0"
@@ -258,7 +256,7 @@ const questionForm7 = document.getElementById("q7")
 
 function q7Transition(){
     setTimeout(() => {
-        questionForm7.style.transform = "translateY(-200px)"
+        
         questionForm7.style.transition = ".3s ease"
         setTimeout(() =>{
             questionForm7.style.opacity = "0"
@@ -279,7 +277,7 @@ const questionForm8 = document.getElementById("q8")
 
 function q8Transition(){
     setTimeout(() => {
-        questionForm8.style.transform = "translateY(-200px)"
+        
         questionForm8.style.transition = ".3s ease"
         setTimeout(() => {
             questionForm8.style.opacity = "0"
@@ -300,7 +298,7 @@ const questionForm9 = document.getElementById("q9")
 
 function q9Transition(){
     setTimeout(() => {
-        questionForm9.style.transform = "translateY(-200px)"
+        
         questionForm9.style.transition = ".3s ease"
         setTimeout(() => {
             questionForm9.style.opacity = "0"
@@ -320,17 +318,17 @@ function q9Transition(){
 const questionForm10 = document.getElementById("q10")
 
 const sendForm = document.querySelector('.endingBtn')
-const questionContainer = document.querySelector('.container_questions')
+
 const ending = document.querySelector('.container_ending')
 
 sendForm.addEventListener('click', function endingScreen(){
     setTimeout(() => {
-        questionContainer.style.transform = "translateY(-200px)"
-        questionContainer.style.transition = ".3s ease"
+        
+        containerQuestions.style.transition = ".3s ease"
         setTimeout(() => {
-            questionContainer.style.opacity = "0"
+            containerQuestions.style.opacity = "0"
             setTimeout(() => {
-                questionContainer.style.display = "none"
+                containerQuestions.style.display = "none"
                 progressBar.style.width = "100vw"
                 ending.style.display = "flex"
                 setTimeout(() => {

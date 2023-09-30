@@ -72,6 +72,17 @@ span{
     transform: translateY(0);
 }
 
+.fadeFromTop{
+    opacity: 0;
+    transform: translateY(0);
+    transition: .5s ease, transform .5s ease;
+}
+
+.fadeFromTop.on{
+    opacity: 1;
+    transform: translateY(-50px);
+}
+
 .start{
     padding: 10px;
     padding-left: 20px;
@@ -168,6 +179,32 @@ span{
     margin-top: 10px;
     width: 800px;
     font-weight: 700;
+}
+
+.back-forward{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 800px;
+}
+
+.back-forward p{
+    color: var(--fontColor);
+}
+
+.back-forward button{
+    width: 50px !important;
+    height: 70px !important;
+    margin-top: 10px !important;
+    background: var(--secondary) !important;
+    border: none !important;
+    border-radius: 5px !important;
+    transition: .3s ease !important;
+}
+
+.back-forward button:hover{
+    background: var(--hoverSecondary);
+    cursor: pointer;
 }
 
 .buttonStyle{

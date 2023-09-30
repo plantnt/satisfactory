@@ -31,7 +31,7 @@
             </div>
             <button type="button" id="checkingBtn" class="optionBtn buttonStyle codeBtn" disabled>Aceptar</button>
         </form>
-        <form id="q1" class="question" style="display: none;">
+        <form id="q1" class="question fadeFromBottom fadeFromTop" style="display: none;">
             <p id="qTitle">1 → ¿Que sede visitaste?</p>
             <div class="selector">
                 <div id="selector-field">
@@ -46,7 +46,7 @@
                 </ul>
             </div>
         </form>
-        <form id="q2" class="question fadeFromBottom" style="display: none;">
+        <form id="q2" class="question fadeFromBottom fadeFromTop" style="display: none;">
             <p id="qTitle">2 → ¿Quién te atendió?</p>
             <p id="requiredQuestion">Esta pregungta es obligatoria</p>
             <h4>Escribe el nombre que llevaba en su uniforme</h4>
@@ -55,7 +55,7 @@
             </div>
             <button type="button" id="waiterBtn" class="optionBtn buttonStyle" disabled>Aceptar</button>
         </form>
-        <form id="q3" class="question fadeFromBottom" style="display: none;">
+        <form id="q3" class="question fadeFromBottom fadeFromTop" style="display: none;">
             <p id="qTitle">3 → ¿Qué tan aseado estaba el lugar?</p>
             <div class="rating2 ratings">
                 <div class="option-group">
@@ -71,10 +71,19 @@
                     <p>Normal</p>
                     <p>Impecable</p>
                 </div>
-                <button type="button" class="skipBtn">Seguir</button>
+                <div class="back-forward">
+                    <div class="backBtn-group">
+                        <button type="button" class="optionBtn" id="q3-back"><img src="/img/back.png" width="15px" height="auto"></button>
+                        <p>Volver</p>
+                    </div>
+                    <div class="forwardBtn-group">
+                        <button type="button" class="optionBtn" id="q3-forw"><img src="/img/forw.png" width="15px" height="auto"></button>
+                        <p>Continuar</p>
+                    </div>
+                </div>
             </div>
         </form>
-        <form id="q4" class="question fadeFromBottom" style="display: none;">
+        <form id="q4" class="question fadeFromBottom fadeFromTop" style="display: none;">
             <p id="qTitle">4 → ¿Qué tal estuvo la temperatura de la comida?</p>
             <div class="rating3 ratings">
                 <div class="option-group">
@@ -90,9 +99,19 @@
                     <p>Podría estar mejor</p>
                     <p>Adecuada</p>
                 </div>
+                <div class="back-forward">
+                    <div class="backBtn-group">
+                        <button type="button" class="optionBtn" id="q4-back"><img src="/img/back.png" width="15px" height="auto"></button>
+                        <p>Volver</p>
+                    </div>
+                    <div class="forwardBtn-group">
+                        <button type="button" class="optionBtn" id="q4-forw"><img src="/img/forw.png" width="15px" height="auto"></button>
+                        <p>Continuar</p>
+                    </div>
+                </div>
             </div>
         </form>
-        <form id="q5" class="question fadeFromBottom" style="display: none;">
+        <form id="q5" class="question fadeFromBottom fadeFromTop" style="display: none;">
             <p id="qTitle">5 → ¿Cómo estuvo la presentación del plato?</p>
             <div class="rating4 ratings">
                 <div class="option-group">
@@ -107,6 +126,16 @@
                     <p>Pobre</p>
                     <p>Normal</p>
                     <p>Increíble</p>
+                </div>
+                <div class="back-forward">
+                    <div class="backBtn-group">
+                        <button type="button" class="optionBtn" id="q5-back"><img src="/img/back.png" width="15px" height="auto"></button>
+                        <p>Volver</p>
+                    </div>
+                    <div class="forwardBtn-group">
+                        <button type="button" class="optionBtn" id="q5-forw"><img src="/img/forw.png" width="15px" height="auto"></button>
+                        <p>Continuar</p>
+                    </div>
                 </div>
             </div>
         </form>
@@ -126,6 +155,16 @@
                     <p>Suficientes</p>
                     <p>Mucha variedad</p>
                 </div>
+                <div class="back-forward">
+                    <div class="backBtn-group">
+                        <button type="button" class="optionBtn" id="q6-back"><img src="/img/back.png" width="15px" height="auto"></button>
+                        <p>Volver</p>
+                    </div>
+                    <div class="forwardBtn-group">
+                        <button type="button" class="optionBtn" id="q6-forw"><img src="/img/forw.png" width="15px" height="auto"></button>
+                        <p>Continuar</p>
+                    </div>
+                </div>
             </div>
         </form>
         <form id="q7" class="question fadeFromBottom" style="display: none;">
@@ -143,6 +182,16 @@
                     <p>Lentísimo</p>
                     <p>Normal</p>
                     <p>Super rápido</p>
+                </div>
+                <div class="back-forward">
+                    <div class="backBtn-group">
+                        <button type="button" class="optionBtn" id="q7-back"><img src="/img/back.png" width="15px" height="auto"></button>
+                        <p>Volver</p>
+                    </div>
+                    <div class="forwardBtn-group">
+                        <button type="button" class="optionBtn" id="q7-forw"><img src="/img/forw.png" width="15px" height="auto"></button>
+                        <p>Continuar</p>
+                    </div>
                 </div>
             </div>
         </form>
@@ -162,6 +211,16 @@
                     <p>Estuvieron atentos</p>
                     <p>Me atendieron re bien</p>
                 </div>
+                <div class="back-forward">
+                    <div class="backBtn-group">
+                        <button type="button" class="optionBtn" id="q8-back"><img src="/img/back.png" width="15px" height="auto"></button>
+                        <p>Volver</p>
+                    </div>
+                    <div class="forwardBtn-group">
+                        <button type="button" class="optionBtn" id="q8-forw"><img src="/img/forw.png" width="15px" height="auto"></button>
+                        <p>Continuar</p>
+                    </div>
+                </div>
             </div>
         </form>
         <form id="q9" class="question fadeFromBottom" style="display: none;">
@@ -180,6 +239,16 @@
                     <p>Me explicaron unas cosas</p>
                     <p>Me quedó muy claro</p>
                 </div>
+                <div class="back-forward">
+                    <div class="backBtn-group">
+                        <button type="button" class="optionBtn" id="q9-back"><img src="/img/back.png" width="15px" height="auto"></button>
+                        <p>Volver</p>
+                    </div>
+                    <div class="forwardBtn-group">
+                        <button type="button" class="optionBtn" id="q9-forw"><img src="/img/forw.png" width="15px" height="auto"></button>
+                        <p>Continuar</p>
+                    </div>
+                </div>
             </div>
         </form>
         <form id="q10" class="question fadeFromBottom" style="display: none;">
@@ -189,10 +258,10 @@
             </div>
             <button type="button" class="endingBtn buttonStyle">Enviar</button>
         </form>
-        <div class="container_ending fadeFromBottom" style="display: none;">
-            <h3>¡GRACIAS POR TERMINAR NUESTRA ENCUESTA!</h3>
-            <h4>Aqui está tu regalo</h4>
-        </div>
+    </div>
+    <div class="container_ending fadeFromBottom" style="display: none;">
+        <h3>¡GRACIAS POR TERMINAR NUESTRA ENCUESTA!</h3>
+        <h4>Aqui está tu regalo</h4>
     </div>
 </body>
 <script src="code.js"></script>
