@@ -1,33 +1,3 @@
-const codeTextarea = document.getElementById("codeValue")
-const buttonOfCodeCheck = document.getElementById("checkingBtn")
-
-function checkTextarea1(){
-    if(codeTextarea.value.trim() != ''){
-        buttonOfCodeCheck.disabled = false
-        console.log(codeTextarea.value.trim())
-        buttonOfCodeCheck.style.background = "var(--secondary)"
-        buttonOfCodeCheck.style.cursor = "pointer"
-    }
-    else{
-        buttonOfCodeCheck.disabled = true
-        buttonOfCodeCheck.style.cursor = "not-allowed"
-        buttonOfCodeCheck.style.background = "var(--hoverSecondary)"
-    }
-}
-
-codeTextarea.addEventListener('input', checkTextarea1)
-checkTextarea1()
-
-buttonOfCodeCheck.addEventListener('click', locationTransition)
-
-function preventEnter(event){
-    if(event.keyCode === 13){
-        event.preventDefault()
-    }
-}
-
-const waiterTextarea = document.getElementById("waiterName")
-const ButtonOfWaiter = document.getElementById("waiterBtn")
 
 function checkTextarea2(){
     if(waiterTextarea.value.trim() != ''){

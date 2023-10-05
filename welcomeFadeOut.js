@@ -3,9 +3,10 @@ const containerQuestions = document.querySelector('.container_questions')
 const startButton = document.querySelector('.start') 
 const progressBarBg = document.querySelector('.progress-bar-bg') 
 const progressBar = document.querySelector('.progress-bar') 
-const codeCheck = document.getElementById('checking')
+const checkingForm = document.getElementById('checking')
 
 function welcomeTransition(){
+    console.log("showing Checking")
     containerWelcome.style.transition = "opacity 0.5s, transform 0.5s"
     containerWelcome.style.opacity = "0"
     containerWelcome.style.transform = "translateY(-200px)"
@@ -15,7 +16,7 @@ function welcomeTransition(){
         progressBarBg.style.opacity = "1"
         setTimeout(() => {
             progressBar.style.transform = "translateX(100px)"
-            document.querySelector(".fadeFromBottom").classList.add("active")
+            checkingForm.classList.add("active")
         }, 500);
     }, 1000);
 }

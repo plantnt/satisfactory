@@ -61,27 +61,6 @@ span{
     animation: fadeFromBottom ease;
 }
 
-.fadeFromBottom{
-    opacity: 0;
-    transform: translateY(50px);
-    transition: .5s ease, transform .5s ease;
-}
-
-.fadeFromBottom.active{
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fadeFromTop{
-    opacity: 0;
-    transform: translateY(0);
-    transition: .5s ease, transform .5s ease;
-}
-
-.fadeFromTop.on{
-    opacity: 1;
-    transform: translateY(-50px);
-}
 
 .start{
     padding: 10px;
@@ -149,22 +128,25 @@ span{
 }
 
 .options{
+    display: flex;
+    justify-content: left;
     width: 100%;
     padding: 15px;
     margin-bottom: 5px;
     list-style: none;
     cursor: pointer;
     box-sizing: border-box;
-    background: var(--optionBackground);
+    background: var(--hoverPrimary);
     color: var(--fontColor);
     font-weight: 600;
+    font-family: inherit;
     border: 1px solid var(--fontColor);
     border-radius: 5px;
     transition: .2s ease;
 }
 
 .options:hover{
-    background: var(--optionBgHover);
+    background: var(--primary);
 }
 
 

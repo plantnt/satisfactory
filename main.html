@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="/img/af_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="transitions.css">
 </head>
 <body>
-
     <div class="progress-bar-bg">
         <span class="progress-bar"></span>
         <span class="completed-bar"></span>
@@ -22,8 +22,8 @@
             <button type="button" class="start">Comenzar</button><p id="enter">Pulsa Enter</p>
         </div>
     </div>
-    <div class="container_questions fadeFromBottom" style="display: none">
-        <form id="checking" class="question" style="display: flex;">
+    <div class="container_questions" style="display: none">
+        <form id="checking" class="question fadeIn" style="display: flex;">
             <p id="qTitle">Escribe el código que está en tu factura</p>
             <p id="requiredQuestion">Esta pregungta es obligatoria</p>
             <div class="ratings">
@@ -31,7 +31,7 @@
             </div>
             <button type="button" id="checkingBtn" class="optionBtn buttonStyle codeBtn" disabled>Aceptar</button>
         </form>
-        <form id="q1" class="question fadeFromBottom fadeFromTop" style="display: none;">
+        <form id="q1" class="question fadeIn" style="display: none;">
             <p id="qTitle">1 → ¿Que sede visitaste?</p>
             <div class="selector">
                 <div id="selector-field">
@@ -39,14 +39,14 @@
                     <img src="/img/arrw.png" width="30px">
                 </div>
                 <ul id="list" style="display: none;">
-                    <li class="options">Ingenio</li>
-                    <li class="options">Palmas Mall</li>
-                    <li class="options">Parque del Perro</li>
-                    <li class="options">Borondo</li>
+                    <li><button type="button" class="options">Ingenio</button></li>
+                    <li><button type="button" class="options">Palmas Mall</button></li>
+                    <li><button type="button" class="options">Parque del Perro</button></li>
+                    <li><button type="button" class="options">Borondo</button></li>
                 </ul>
             </div>
         </form>
-        <form id="q2" class="question fadeFromBottom fadeFromTop" style="display: none;">
+        <form id="q2" class="question fadeIn" style="display: none;">
             <p id="qTitle">2 → ¿Quién te atendió?</p>
             <p id="requiredQuestion">Esta pregungta es obligatoria</p>
             <h4>Escribe el nombre que llevaba en su uniforme</h4>
@@ -55,7 +55,7 @@
             </div>
             <button type="button" id="waiterBtn" class="optionBtn buttonStyle" disabled>Aceptar</button>
         </form>
-        <form id="q3" class="question fadeFromBottom fadeFromTop" style="display: none;">
+        <form id="q3" class="question fadeIn" style="display: none;">
             <p id="qTitle">3 → ¿Qué tan aseado estaba el lugar?</p>
             <div class="rating2 ratings">
                 <div class="option-group">
@@ -83,7 +83,7 @@
                 </div>
             </div>
         </form>
-        <form id="q4" class="question fadeFromBottom fadeFromTop" style="display: none;">
+        <form id="q4" class="question fadeIn" style="display: none;">
             <p id="qTitle">4 → ¿Qué tal estuvo la temperatura de la comida?</p>
             <div class="rating3 ratings">
                 <div class="option-group">
@@ -111,7 +111,7 @@
                 </div>
             </div>
         </form>
-        <form id="q5" class="question fadeFromBottom fadeFromTop" style="display: none;">
+        <form id="q5" class="question fadeIn" style="display: none;">
             <p id="qTitle">5 → ¿Cómo estuvo la presentación del plato?</p>
             <div class="rating4 ratings">
                 <div class="option-group">
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </form>
-        <form id="q6" class="question fadeFromBottom" style="display: none;">
+        <form id="q6" class="question fadeIn" style="display: none;">
             <h3 id="singleText">6 → ¿Qué te pareció la variedad de platos?</h3>
             <div class="rating5 ratings">
                 <div class="option-group">
@@ -167,7 +167,7 @@
                 </div>
             </div>
         </form>
-        <form id="q7" class="question fadeFromBottom" style="display: none;">
+        <form id="q7" class="question fadeIn" style="display: none;">
             <h3>7 → ¿Cómo fue el tiempo de espera?</h3>
                 <div class="rating6 ratings">
                 <div class="option-group">
@@ -195,7 +195,7 @@
                 </div>
             </div>
         </form>
-        <form id="q8" class="question fadeFromBottom" style="display: none;">
+        <form id="q8" class="question fadeIn" style="display: none;">
             <h3 id="singleText">8 → ¿Cómo te atendió el/la mesero/a?</h3>
                 <div class="rating8 ratings">
                 <div class="option-group">
@@ -223,7 +223,7 @@
                 </div>
             </div>
         </form>
-        <form id="q9" class="question fadeFromBottom" style="display: none;">
+        <form id="q9" class="question fadeIn" style="display: none;">
             <h3 id="singleText">9 → ¿Te explicaron el menú?</h3>
                 <div class="rating9 ratings">
                 <div class="option-group">
@@ -251,7 +251,7 @@
                 </div>
             </div>
         </form>
-        <form id="q10" class="question fadeFromBottom" style="display: none;">
+        <form id="q10" class="question fadeIn" style="display: none;">
             <h3 id="singleText">10 → ¿Quieres contarnos más detalles sobre tu experiencia?</h3>
             <div class="rating7 ratings">
                 <textarea id="addExperience" rows="1" maxlength="15" placeholder="Escribe aquí tu respuesta..."></textarea>
@@ -259,13 +259,14 @@
             <button type="button" class="endingBtn buttonStyle">Enviar</button>
         </form>
     </div>
-    <div class="container_ending fadeFromBottom" style="display: none;">
+    <div class="container_ending fadeIn" style="display: none;">
         <h3>¡GRACIAS POR TERMINAR NUESTRA ENCUESTA!</h3>
         <h4>Aqui está tu regalo</h4>
     </div>
 </body>
-<script src="code.js"></script>
-<script src="selector.js"></script>
-<script src="buttons.js"></script>
-<script src="textarea.js"></script>
+<script src="welcomeFadeOut.js"></script>
+<script src="./textareas/checkingTxtArea.js"></script>
+<script src="./textareas/waiterTxtArea.js"></script>
+<script src="q1Options.js"></script>
+<script src="questionTransitions.js"></script>
 </html>
