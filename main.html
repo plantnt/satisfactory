@@ -34,9 +34,9 @@
         <form id="q1" class="question fadeIn" style="display: none;">
             <p id="qTitle">1 → ¿Que sede visitaste?</p>
             <div class="selector">
-                <div id="selector-field">
-                    <p id="selector-text">Haz click para elegir</p>
-                    <img src="/img/arrw.png" width="30px">
+                <div id="location-container">
+                    <p id="location-text">Haz click para elegir</p>
+                    <a id="location-field"><img id="colapser" src="/img/arrw_U.png" width="30px"></a>
                 </div>
                 <ul id="list" style="display: none;">
                     <li><button type="button" class="options">Ingenio</button></li>
@@ -256,7 +256,7 @@
             <div class="rating7 ratings">
                 <textarea id="addExperience" rows="1" maxlength="15" placeholder="Escribe aquí tu respuesta..."></textarea>
             </div>
-            <button type="button" class="endingBtn buttonStyle">Enviar</button>
+            <button type="button" id="endingBtn" class="buttonStyle">Enviar</button>
         </form>
     </div>
     <div class="container_ending fadeIn" style="display: none;">
@@ -265,6 +265,7 @@
     </div>
 </body>
 <script src="welcomeFadeOut.js"></script>
+<script src="pulseAnim.js"></script>
 <script src="./textareas/checkingTxtArea.js"></script>
 <script src="./textareas/waiterTxtArea.js"></script>
 <script src="q1Options.js"></script>

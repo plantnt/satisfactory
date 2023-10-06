@@ -1,20 +1,21 @@
-const locationSelected = document.getElementById("selector-text")
-const locationSelector = document.getElementById("selector-field")
+const locationSelected = document.getElementById("location-text")
+const locationSelector = document.getElementById("location-field")
 const listOfLocations = document.getElementById("list")
+const listArrow = document.getElementById("colapser")
 
 locationSelector.addEventListener('click', () => {       //MOSTRAR LAS OPCIONES PARA LA UBICACION
     console.log("clicked")
     listOfLocations.style.display = "grid"
+    listArrow.src = "/img/arrw_D.png"
     setTimeout(() => {
         listOfLocations.style.opacity = "1"
-        listOfLocations.style.transform = "translateY(0)"
-        listOfLocations.style.transition = ".3s ease"
-    },300)
-    listOfLocations.style.opacity = "1"
-    listOfLocations.style.transform = "translateY(-10px)" 
-    
-    
+        listOfLocations.style.transform = "translateY(0px)" 
+        listOfLocations.style.transition = ".2s ease"
+    },100)
 })
+
+
+
 
 const options = document.querySelectorAll(".options")       //ANIMACION DE PARPADEO PARA LAS OPCIONES
 
